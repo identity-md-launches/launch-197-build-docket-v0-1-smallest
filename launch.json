@@ -1,0 +1,17 @@
+{
+  "kind": "evm_project",
+  "token": null,
+  "contracts": [
+    {
+      "contract": "Docket",
+      "constructorArgs": []
+    }
+  ],
+  "pool": {
+    "pairedCurrency": "0x0000000000000000000000000000000000000000",
+    "fee": 3000,
+    "tickSpacing": 60,
+    "initialPrice": "79228162514264337593543950336"
+  },
+  "notes": "INCOMPLETE: this draft intentionally fails evm_project validation because token is null. The accepted tree contains src/Docket.sol:Docket, a permissionless forum contract with no constructor arguments or privileged role. It has no ERC-20 implementation, and Docket has no totalSupply, balanceOf, decimals or transfer functions. The pinned project checks require an actual token, so Docket cannot fill the token entry. A conforming manifest requires an accepted token implementation and its name, symbol and decimals, or a revised schema supporting a token-free project. This manifest-only assignment cannot add that implementation. The application entry matches the accepted source and requires no initialization. Pool values are the supplied reference defaults only; no token pool can be deployed from this draft. No deployment or launch is authorized by these notes."
+}
